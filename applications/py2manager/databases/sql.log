@@ -92,3 +92,12 @@ ALTER TABLE auth_user ADD image CHAR(512);
 timestamp: 2014-06-28T04:31:55.162063
 ALTER TABLE auth_user ADD address CHAR(512);
 success!
+timestamp: 2014-06-28T15:22:31.712709
+CREATE TABLE note(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    post_id INTEGER REFERENCES project (id) ON DELETE CASCADE,
+    post TEXT NOT NULL,
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!

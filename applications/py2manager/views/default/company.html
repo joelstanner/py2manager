@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-<h1>Add a new company</h1>
+<h2>Add a new company</h2>
 <br/>
 {{=company_form.custom.begin}}
 <strong>Company Name</strong>
@@ -20,3 +20,8 @@
 <br/>
 {{=company_form.custom.submit}}
 {{=company_form.custom.end}}
+<br/>
+<br/>
+<h2>All companies:</h2>
+<br/>
+{{=grid}}
